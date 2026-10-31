@@ -1,0 +1,376 @@
+:root {
+  --purple: #754BB7;
+  --pink: #CD49A5;
+  --orange: #FF8E67;
+  --gold: #FFC459;
+  --ink: #4B4453;
+  --dark: #211C29;
+  --white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+a {
+  color: var(--purple);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: var(--white);
+  color: var(--dark);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--dark);
+  color: var(--white);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 14px 70px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.brand-subtitle {
+  display: block;
+  margin-top: 5px;
+  color: #C9C0D5;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+#menuToggle {
+  top: 28px;
+  left: 28px;
+}
+
+#menu {
+  top: -28px;
+  left: -28px;
+  width: min(400px, 100vw);
+  max-width: 400px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 100px 28px 28px;
+  visibility: hidden;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), visibility 0.5s;
+}
+
+#menuToggle input:checked ~ ul {
+  visibility: visible;
+}
+
+#menuToggle input:focus-visible ~ span {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+#menuToggle a {
+  display: block;
+  padding: 6px 0;
+}
+
+#menuToggle a:hover {
+  color: var(--purple);
+}
+
+.moodle-ghost {
+  position: relative;
+  margin: 0 auto;
+  background-color: #15111C;
+}
+
+.moodle-ghost::after {
+  pointer-events: none;
+}
+
+.moodle-ghost > span {
+  color: #BBAADD;
+}
+
+#title h1 {
+  margin: 10px 16px 14px;
+  color: var(--dark);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.8em;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.eyebrow {
+  margin: 0 16px 18px;
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin: 0 20px 28px;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+#image {
+  width: 1000px;
+}
+
+#img-caption {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.photo-credit {
+  display: block;
+  margin-top: 6px;
+  color: #625B6A;
+  font-size: 11px;
+}
+
+#tribute-info {
+  padding: 8px 0 54px;
+}
+
+#tribute-info h3 {
+  color: var(--dark);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.biography {
+  display: grid;
+  grid-template-columns: minmax(130px, 180px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+.portrait {
+  margin: 0;
+}
+
+.portrait img {
+  width: 180px;
+}
+
+.portrait figcaption {
+  font-size: 12px;
+}
+
+.portrait small {
+  display: block;
+  font-size: 10px;
+}
+
+.biography p {
+  margin: 0 0 18px;
+}
+
+#tribute-info ul {
+  padding-left: 24px;
+}
+
+#tribute-info li {
+  padding-left: 4px;
+}
+
+#tribute-info li::marker {
+  color: var(--purple);
+}
+
+.tribute-quote {
+  margin: 52px 0 0;
+  padding: 22px 24px;
+  border-left: 3px solid var(--purple);
+  background: #E7DFEE;
+}
+
+.tribute-quote p {
+  margin: 0 0 14px;
+}
+
+.tribute-quote figcaption {
+  font-size: 13px;
+}
+
+.disclaimer small {
+  font-size: 12px;
+}
+
+footer {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px 28px;
+}
+
+footer .eyebrow {
+  color: var(--orange);
+}
+
+footer h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#tribute-link {
+  margin: 24px auto 0;
+}
+
+.back-to-top {
+  color: #E3DAEC;
+  font-size: 13px;
+}
+
+.footer-note {
+  margin: 24px 0 0;
+  color: #BDB2C9;
+}
+
+@media (max-width: 750px) {
+  .nav-inner {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  #title h1 {
+    font-size: 2.15em;
+  }
+
+  .biography {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #menuToggle {
+    left: 20px;
+  }
+
+  #menu {
+    left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .brand-subtitle {
+    font-size: 8px;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  #title h1 {
+    font-size: 1.9em;
+  }
+
+  .biography {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .portrait {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .tribute-quote {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .moodle-ghost::after, .moodle-ghost > span {
+    animation: none;
+  }
+
+  #menu, #menuToggle span, #menuToggle a {
+    transition: none;
+  }
+}
